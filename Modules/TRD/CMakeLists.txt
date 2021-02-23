@@ -2,7 +2,7 @@
 
 add_library(QcTRD)
 
-target_sources(QcTRD PRIVATE src/DigitsTask.cxx
+target_sources(QcTRD PRIVATE src/TrackletsTask.cxx  src/DigitsTask.cxx
                              src/DigitsCheck.cxx)
 
 target_include_directories(
@@ -20,6 +20,7 @@ install(TARGETS QcTRD
 
 add_root_dictionary(QcTRD
                     HEADERS
+  include/TRD/TrackletsTask.h
                             include/TRD/DigitsTask.h
                             include/TRD/DigitsCheck.h
                     LINKDEF include/TRD/LinkDef.h
